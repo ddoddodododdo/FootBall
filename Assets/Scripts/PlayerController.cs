@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
     private const float walkSpeed = 3;
     private const float runSpeed = 5;
-    private const float speedLimit = 0.05f;
+    //private const float speedLimit = 0.05f;
 
     private void Awake()
     {
@@ -29,8 +29,8 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
     private void Start()
     {
-        //if (photonView.IsMine)
-            cameraController.player = gameObject;
+        if (photonView.IsMine)
+            CameraController.instance.player = gameObject;
     }
 
     private void FixedUpdate()
@@ -45,6 +45,8 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
     private void MoveControl()
     {
+        if (PhotonNetwork.IsConnected && !photonView.IsMine) return;
+
         if (Input.GetKey(KeyCode.LeftShift)) applySpeed = runSpeed;
         else                                 applySpeed = walkSpeed;
 

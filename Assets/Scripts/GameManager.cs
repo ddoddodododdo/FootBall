@@ -9,12 +9,12 @@ public class GameManager : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
-        
+        MakeMyCharacter();
     }
 
-    public void TryConnect()
+    public void MakeMyCharacter()
     {
-        PhotonNetwork.ConnectUsingSettings();
+        PhotonNetwork.Instantiate("Player", new Vector3(0, 1.5f, 0), Quaternion.identity);
     }
-
+   
 }
