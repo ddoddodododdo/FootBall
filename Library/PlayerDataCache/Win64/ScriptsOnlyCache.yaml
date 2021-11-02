@@ -6,6 +6,8 @@ ScriptsOnlyBuild:
     - GameManager
     - LobbyManager
     - PlayerController
+    - Team
+    - WaitingWindow
     PhotonUnityNetworking.Demos.dll:
     - Photon.Pun.Demo.Asteroids.Asteroid
     - Photon.Pun.Demo.Asteroids.Bullet
@@ -16,6 +18,8 @@ ScriptsOnlyBuild:
     - Photon.Pun.Demo.PunBasics.PlayerUI
     - Photon.Pun.Demo.SlotRacer.PlayerControl
     - Photon.Pun.Demo.SlotRacer.Utils.SplineWalker
+    PhotonUnityNetworking.Editor.dll:
+    - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.dll:
     - Photon.Pun.PhotonAnimatorView
     - Photon.Pun.PhotonRigidbodyView
@@ -81,15 +85,17 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 3228}
+      Script: {instanceID: 3230}
     - Class: 114
-      Script: {instanceID: 3408}
+      Script: {instanceID: 3410}
     - Class: 114
-      Script: {instanceID: 5044}
+      Script: {instanceID: 5046}
     - Class: 114
-      Script: {instanceID: 5336}
+      Script: {instanceID: 5338}
     - Class: 114
-      Script: {instanceID: 5400}
+      Script: {instanceID: 5402}
+    - Class: 114
+      Script: {instanceID: 17744}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 134
@@ -99,6 +105,8 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 258
       Script: {instanceID: 0}
     Assets/Scenes/LobbyScene.unity:
     - Class: 1
@@ -158,37 +166,39 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1798}
     - Class: 114
-      Script: {instanceID: 2334}
+      Script: {instanceID: 1992}
     - Class: 114
-      Script: {instanceID: 2386}
+      Script: {instanceID: 2336}
     - Class: 114
-      Script: {instanceID: 2626}
+      Script: {instanceID: 2388}
     - Class: 114
-      Script: {instanceID: 2850}
+      Script: {instanceID: 2628}
     - Class: 114
-      Script: {instanceID: 3180}
+      Script: {instanceID: 2852}
     - Class: 114
-      Script: {instanceID: 3228}
+      Script: {instanceID: 3182}
     - Class: 114
-      Script: {instanceID: 3238}
+      Script: {instanceID: 3230}
     - Class: 114
       Script: {instanceID: 3240}
     - Class: 114
-      Script: {instanceID: 3908}
+      Script: {instanceID: 3242}
     - Class: 114
-      Script: {instanceID: 4276}
+      Script: {instanceID: 3910}
     - Class: 114
-      Script: {instanceID: 4282}
+      Script: {instanceID: 4278}
     - Class: 114
-      Script: {instanceID: 4496}
+      Script: {instanceID: 4284}
     - Class: 114
-      Script: {instanceID: 4576}
+      Script: {instanceID: 4498}
     - Class: 114
-      Script: {instanceID: 5044}
+      Script: {instanceID: 4578}
     - Class: 114
-      Script: {instanceID: 5230}
+      Script: {instanceID: 5046}
     - Class: 114
-      Script: {instanceID: 5620}
+      Script: {instanceID: 5232}
+    - Class: 114
+      Script: {instanceID: 5622}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -218,6 +228,8 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
     - Class: 225
+      Script: {instanceID: 0}
+    - Class: 258
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -496,6 +508,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UIVirtualTouchZone
+  - hash:
+      serializedVersion: 2
+      Hash: e877159742923ae9fba08d7e7059a4d8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: WaitingWindow
   - hash:
       serializedVersion: 2
       Hash: 2163458cae41cb1735c8b06fc34a9582
@@ -822,7 +840,7 @@ ScriptsOnlyBuild:
     className: CountOfPlayersProperty
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: f9c1eb2c681540a17632144e79a41f88
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LobbyManager
@@ -1068,7 +1086,7 @@ ScriptsOnlyBuild:
     className: PlayerInputEditor
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 8c95c26efbf2250a2d2931c4adee2b99
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -2056,6 +2074,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit.Forms
     className: UserIdUiForm
+  - hash:
+      serializedVersion: 2
+      Hash: 2df7219e7d9dce6b9c34c37433173bda
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Team
   platform: 19
   scenePathNames:
   - Assets/Scenes/LobbyScene.unity

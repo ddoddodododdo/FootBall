@@ -6,15 +6,27 @@ using Photon.Realtime;
 
 public class GameManager : MonoBehaviourPunCallbacks
 {
-    // Start is called before the first frame update
+    public Team[] teams;
+
+    private Team myTeam;
+
     void Start()
     {
+        SetMyTeam();
         MakeMyCharacter();
+
     }
 
-    public void MakeMyCharacter()
+    private void SetMyTeam()
     {
-        PhotonNetwork.Instantiate("Player", new Vector3(0, 1.5f, 0), Quaternion.identity);
+        if (PhotonNetwork.IsMasterClient) myTeam = teams[0];
+        else myTeam = teams[1]; 
+    }
+
+    private void MakeMyCharacter()
+    {
+        PhotonNetwork.Instantiate("Player", myTeam.spawnPoint.transform.position, Quaternion.identity);
+        
     }
    
 }
