@@ -233,7 +233,6 @@ GameObject:
   - component: {fileID: 353129260}
   - component: {fileID: 353129261}
   - component: {fileID: 353129263}
-  - component: {fileID: 353129262}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -346,22 +345,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigid: {fileID: 353129260}
---- !u!114 &353129262
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 353129255}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
-  m_UseLocal: 1
 --- !u!114 &353129263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -381,7 +364,7 @@ MonoBehaviour:
   OwnershipTransfer: 0
   observableSearch: 2
   ObservedComponents:
-  - {fileID: 353129262}
+  - {fileID: 353129261}
   sceneViewId: 1
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -517,7 +500,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 571490183}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1

@@ -89,13 +89,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3410}
     - Class: 114
-      Script: {instanceID: 5046}
+      Script: {instanceID: 4320}
     - Class: 114
-      Script: {instanceID: 5338}
+      Script: {instanceID: 5340}
     - Class: 114
-      Script: {instanceID: 5402}
-    - Class: 114
-      Script: {instanceID: 17744}
+      Script: {instanceID: 5404}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 134
@@ -190,15 +188,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4284}
     - Class: 114
-      Script: {instanceID: 4498}
+      Script: {instanceID: 4500}
     - Class: 114
-      Script: {instanceID: 4578}
+      Script: {instanceID: 4580}
     - Class: 114
-      Script: {instanceID: 5046}
+      Script: {instanceID: 5048}
     - Class: 114
-      Script: {instanceID: 5232}
+      Script: {instanceID: 5234}
     - Class: 114
-      Script: {instanceID: 5622}
+      Script: {instanceID: 5624}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1500,6 +1498,12 @@ ScriptsOnlyBuild:
     className: LobbyMainPanel
   - hash:
       serializedVersion: 2
+      Hash: 2df7219e7d9dce6b9c34c37433173bda
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Team
+  - hash:
+      serializedVersion: 2
       Hash: cd0ecdca0166232906c6f2df9dddc3d3
     assemblyName: Unity.InputSystem.dll
     namespaceName: UnityEngine.InputSystem.Editor
@@ -2074,12 +2078,6 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit.Forms
     className: UserIdUiForm
-  - hash:
-      serializedVersion: 2
-      Hash: 2df7219e7d9dce6b9c34c37433173bda
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Team
   platform: 19
   scenePathNames:
   - Assets/Scenes/LobbyScene.unity
