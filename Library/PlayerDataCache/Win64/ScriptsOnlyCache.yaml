@@ -4,6 +4,7 @@ ScriptsOnlyBuild:
     - Ball
     - CameraController
     - GameManager
+    - GoalPost
     - LobbyManager
     - PlayerController
     - Team
@@ -32,6 +33,12 @@ ScriptsOnlyBuild:
     - UnityEngine.InputSystem.RemoteInputPlayerConnection
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    Unity.TextMeshPro.dll:
+    - TMPro.TMP_FontAsset
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAsset
+    - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshProUGUI
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -85,16 +92,32 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 3230}
+      Script: {instanceID: 1484}
     - Class: 114
-      Script: {instanceID: 3410}
+      Script: {instanceID: 1488}
     - Class: 114
-      Script: {instanceID: 4320}
+      Script: {instanceID: 1882}
     - Class: 114
-      Script: {instanceID: 5340}
+      Script: {instanceID: 2654}
     - Class: 114
-      Script: {instanceID: 5404}
+      Script: {instanceID: 2866}
+    - Class: 114
+      Script: {instanceID: 3256}
+    - Class: 114
+      Script: {instanceID: 3266}
+    - Class: 114
+      Script: {instanceID: 3436}
+    - Class: 114
+      Script: {instanceID: 4256}
+    - Class: 114
+      Script: {instanceID: 4348}
+    - Class: 114
+      Script: {instanceID: 5368}
+    - Class: 114
+      Script: {instanceID: 5432}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 134
       Script: {instanceID: 0}
@@ -103,6 +126,12 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
     - Class: 258
       Script: {instanceID: 0}
@@ -125,6 +154,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
     - Class: 65
@@ -146,57 +177,65 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1458}
+      Script: {instanceID: 1484}
     - Class: 114
-      Script: {instanceID: 1460}
+      Script: {instanceID: 1486}
     - Class: 114
-      Script: {instanceID: 1462}
+      Script: {instanceID: 1488}
     - Class: 114
-      Script: {instanceID: 1464}
+      Script: {instanceID: 1490}
     - Class: 114
-      Script: {instanceID: 1468}
+      Script: {instanceID: 1494}
     - Class: 114
-      Script: {instanceID: 1584}
+      Script: {instanceID: 1610}
     - Class: 114
-      Script: {instanceID: 1752}
+      Script: {instanceID: 1778}
     - Class: 114
-      Script: {instanceID: 1786}
+      Script: {instanceID: 1812}
     - Class: 114
-      Script: {instanceID: 1798}
+      Script: {instanceID: 1824}
     - Class: 114
-      Script: {instanceID: 1992}
+      Script: {instanceID: 1882}
     - Class: 114
-      Script: {instanceID: 2336}
+      Script: {instanceID: 2018}
     - Class: 114
-      Script: {instanceID: 2388}
+      Script: {instanceID: 2238}
     - Class: 114
-      Script: {instanceID: 2628}
+      Script: {instanceID: 2362}
     - Class: 114
-      Script: {instanceID: 2852}
+      Script: {instanceID: 2414}
     - Class: 114
-      Script: {instanceID: 3182}
+      Script: {instanceID: 2654}
     - Class: 114
-      Script: {instanceID: 3230}
+      Script: {instanceID: 2878}
     - Class: 114
-      Script: {instanceID: 3240}
+      Script: {instanceID: 3208}
     - Class: 114
-      Script: {instanceID: 3242}
+      Script: {instanceID: 3256}
     - Class: 114
-      Script: {instanceID: 3910}
+      Script: {instanceID: 3266}
     - Class: 114
-      Script: {instanceID: 4278}
+      Script: {instanceID: 3268}
     - Class: 114
-      Script: {instanceID: 4284}
+      Script: {instanceID: 3936}
     - Class: 114
-      Script: {instanceID: 4500}
+      Script: {instanceID: 4306}
     - Class: 114
-      Script: {instanceID: 4580}
+      Script: {instanceID: 4312}
     - Class: 114
-      Script: {instanceID: 5048}
+      Script: {instanceID: 4528}
     - Class: 114
-      Script: {instanceID: 5234}
+      Script: {instanceID: 4608}
     - Class: 114
-      Script: {instanceID: 5624}
+      Script: {instanceID: 4738}
+    - Class: 114
+      Script: {instanceID: 5076}
+    - Class: 114
+      Script: {instanceID: 5078}
+    - Class: 114
+      Script: {instanceID: 5262}
+    - Class: 114
+      Script: {instanceID: 5652}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1084,7 +1123,7 @@ ScriptsOnlyBuild:
     className: PlayerInputEditor
   - hash:
       serializedVersion: 2
-      Hash: 8c95c26efbf2250a2d2931c4adee2b99
+      Hash: 299d8595557f49aa4aa432911122dcfd
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -1450,16 +1489,22 @@ ScriptsOnlyBuild:
     className: AutoSyncSceneToggle
   - hash:
       serializedVersion: 2
-      Hash: ee1dba1a186ac062d564e9eb73a1c56f
-    assemblyName: PhotonUnityNetworking.Utilities.dll
-    namespaceName: Photon.Pun.UtilityScripts
-    className: GraphicToggleIsOnTransition
+      Hash: 8fce46fbd7510034cd7cf202590ec92f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GoalPost
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalTrack
+  - hash:
+      serializedVersion: 2
+      Hash: ee1dba1a186ac062d564e9eb73a1c56f
+    assemblyName: PhotonUnityNetworking.Utilities.dll
+    namespaceName: Photon.Pun.UtilityScripts
+    className: GraphicToggleIsOnTransition
   - hash:
       serializedVersion: 2
       Hash: ae1347d9113eee8b83c5c8047dcf31a8
@@ -1498,7 +1543,7 @@ ScriptsOnlyBuild:
     className: LobbyMainPanel
   - hash:
       serializedVersion: 2
-      Hash: 2df7219e7d9dce6b9c34c37433173bda
+      Hash: 8e8a8dd2afbe60879753f188b166ccd6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Team

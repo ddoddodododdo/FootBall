@@ -18,8 +18,8 @@ public class PlayerController : MonoBehaviourPunCallbacks
     private float inputZ;
     private float moveBlendValue;
 
-    private const float walkSpeed = 3;
-    private const float runSpeed = 5;
+    private const float WALK_SPEED = 3;
+    private const float RUN_SPEED = 5;
     //private const float speedLimit = 0.05f;
 
     private void Awake()
@@ -47,8 +47,8 @@ public class PlayerController : MonoBehaviourPunCallbacks
     {
         if (PhotonNetwork.IsConnected && !photonView.IsMine) return;
 
-        if (Input.GetKey(KeyCode.LeftShift)) applySpeed = runSpeed;
-        else                                 applySpeed = walkSpeed;
+        if (Input.GetKey(KeyCode.LeftShift)) applySpeed = RUN_SPEED;
+        else                                 applySpeed = WALK_SPEED;
 
         inputX = Input.GetAxisRaw("Horizontal");
         inputZ = Input.GetAxisRaw("Vertical");

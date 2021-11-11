@@ -7,13 +7,22 @@ public class Ball : MonoBehaviourPunCallbacks, IPunObservable
 {
     public Rigidbody rigid;
 
-    private const string playerTag = "Player";
-    private const string wallTag = "Wall";
+    private const string PLAYER_TAG = "Player";
+    private const string WALL_TAG = "Wall";
 
+    private Vector3 resetPosition;
+
+    private void Awake()
+    {
+        PhotonNetwork.SendRate = 60;
+        PhotonNetwork.SerializationRate = 60;
+
+        resetPosition = transform.position;
+    }
 
     private void OnCollisionEnter(Collision col)
     {
-        if (col.transform.CompareTag(playerTag))
+        if (col.transform.CompareTag(PLAYER_TAG))
         {
             photonView.RPC("AddForce", RpcTarget.MasterClient, col.rigidbody.velocity);
         }
@@ -26,6 +35,11 @@ public class Ball : MonoBehaviourPunCallbacks, IPunObservable
         rigid.velocity = force * 3;
     }
 
+    public void ResetBall()
+    {
+        transform.position = resetPosition;
+        rigid.velocity = Vector3.zero;
+    }
 
 
 
