@@ -47,13 +47,24 @@ public class GameManager : MonoBehaviourPunCallbacks
         myPlayer.transform.position = myTeam.spawnPoint.transform.position;
     }
 
-    public void GoalIn(int id)
+    public void GoalInMessage(int teamID)
     {
-        teams[id].UpScore();
+        //판정이 느린 클라에서 골 판정을 받도록 의도했지만 효과는 모름
+        if (!PhotonNetwork.IsMasterClient)
+        {
+            photonView.RPC("GoalIn", RpcTarget.All, teamID);
+        }
+    }
+
+    [PunRPC]
+    public void GoalIn(int teamID)
+    {
+        teams[teamID].UpScore();
         SetPlayerPosReset();
+        //공은 마스터클라에서 동기화시켜주기 때문
         if (PhotonNetwork.IsMasterClient)
         {
-            ball.ResetBall();   
+            ball.ResetBall();
         }
     }
 

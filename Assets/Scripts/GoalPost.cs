@@ -11,7 +11,7 @@ public class GoalPost : MonoBehaviour
     {
         if (other.CompareTag("Ball"))
         {
-            Team.gameManager.GoalIn(team.id);
+            Team.gameManager.GoalInMessage(team.id);
         }
     }
 }
